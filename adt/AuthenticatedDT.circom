@@ -2,7 +2,7 @@ pragma circom 2.0.0;
 // Based on "Zero-knowledge proofs for decision tree predictions and accuracy": https://dl.acm.org/doi/pdf/10.1145/3372297.3417278
 // include "https://github.com/0xPARC/circom-secp256k1/blob/master/circuits/bigint.circom";
 include "../node_modules/circomlib/circuits/mimcsponge.circom";
-include "../circom-starter/node_modules/circomlib/circuits/comparators.circom";
+include "../node_modules/circomlib/circuits/comparators.circom";
 
 // Computes MiMC([left, right])
 template HashLeftRight() {
@@ -60,12 +60,14 @@ template ThreshComp(){
     signal input input_val;
     signal input threshold_val;
  
-    component isz = IsZero();
+    component isZero;
+
+    isZero = IsZero();
     
     signal out_val;
 
-    pathIndex ==> isz.in;
-    isz.out ==> out_val; //works
+    pathIndex ==> isZero.in;
+    isZero.out ==> out_val; //works
 
 
     component comp = LessThan(64);
@@ -96,12 +98,12 @@ template ADTChecker(levels) {
     signal input randomness;
 
     component selectors[levels];
-    component isz = IsZero();
     component hasher_class;
     component hasher_root;
     component hashers[levels];
     component comp;
     component thresh_comp[levels];
+
 
     signal out1;
 
@@ -185,4 +187,5 @@ i++;
 
 
 component main { public [ leaf, root] } =  ADTChecker(10);
+
 

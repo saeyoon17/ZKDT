@@ -1,7 +1,7 @@
 # #!/bin/bash
 tput setaf 2;echo "Generating a decision tree of depth 10"
 sleep 1
-python3 generate_dt.py
+python generate_dt.py
 tput setaf 2;echo "Generating random input"
 sleep 1
 tput setaf 2;echo "Compiling circuit"
