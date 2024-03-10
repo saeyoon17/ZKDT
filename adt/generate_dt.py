@@ -47,7 +47,7 @@ def class_from_input(dt, input_attributes):
             curr_node = 2*curr_node + 2
         i=i-1
 
-    return [dt[curr_node][1], dt[curr_node][2]];
+    return [dt[curr_node][1], dt[curr_node][2]]
     #returns index, class
 
 def gen_input(dt, depth):
@@ -59,7 +59,7 @@ def gen_input(dt, depth):
 
 	return(input_attributes)		
 
-depth = 10
+depth = 4
 dt = generate_dt(depth)
 k = gen_input(dt,depth)
 

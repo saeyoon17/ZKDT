@@ -186,6 +186,6 @@ i++;
 
 
 
-component main { public [ leaf, root] } =  ADTChecker(10);
+component main { public [ leaf, root] } =  ADTChecker(4);
 
 
