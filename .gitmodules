@@ -1,0 +1,6 @@
+[submodule "circomlib"]
+	path = circomlib
+	url = https://github.com/iden3/circomlib.git
+[submodule "node_modules/circomlib"]
+	path = node_modules/circomlib
+	url = https://github.com/iden3/circomlib.git
