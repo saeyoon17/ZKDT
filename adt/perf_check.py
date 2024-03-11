@@ -8,7 +8,7 @@ a = check_output(
     ],
     shell=True,
 )
-print(time.time() - st)
+print('proof generation time:', time.time() - st)
 st = time.time()
 a = check_output(
     [
@@ -16,4 +16,4 @@ a = check_output(
     ],
     shell=True,
 )
-print(time.time() - st)
+print('verification time:', time.time() - st)

@@ -15,6 +15,6 @@ bash demo.sh
 to manually generate decision tree with depth 4. 
 Finally, run:
 ```
-bash demo.sh
+python perf_check.py
 ```
 to get time spent for generating proof and verifying the decision tree. 
